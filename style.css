@@ -3,11 +3,19 @@
 }
 
 .food-item:hover {
-  box-shadow: 3px 3px 8px #2f15c2e5;
+  box-shadow: 3px 3px 16px #2f15c2e5;
 }
 
 .ic-img {
   max-height: 25dvh;
   object-fit: cover;
   object-position: center;
+}
+
+.ic-img-top {
+  object-position: top;
+}
+
+td {
+  border-left: 2px dashed #2f15c2e5;
 }

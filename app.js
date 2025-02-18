@@ -80,6 +80,27 @@ function calculateOrderTotal() {
   return orderTotal
 }
 
+function checkOut() {
+  const total = calculateOrderTotal()
+  if (total <= 0) {
+    window.alert('No items selected')
+    return
+  }
+
+  window.confirm('Please confirm you would like to pay now.')
+  window.alert('Thank you for your order from The Parlor!')
+  resetCartTotal()
+}
+
+function resetCartTotal() {
+  for (let i = 0; i < iceCreamItems.length; i++) {
+    const iceCreamItem = iceCreamItems[i];
+    iceCreamItem.quantity = 0;
+  }
+  drawCart()
+  drawCartTotal()
+}
+
 // !SECTION
 
 // SECTION Draw / Update

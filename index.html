@@ -27,36 +27,43 @@
   <main>
     <div class="container-fluid">
       <div class="row px-5">
-        <div class="col-md-5">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Each</th>
-                <th scope="col">Item Total</th>
-              </tr>
-            </thead>
-            <tbody id="tableElem">
-              
-            </tbody>
-            <tfoot class="d-md-flex-column">
-              <tr>
-                <th>Order Total: $<span id="totalElem">0</span></th>
-              </tr>
-              <tr>
-                <th>
-                  <button class="btn btn-warning">Checkout</button>
-                </th>
-              </tr>
-            </tfoot>
-          </table>
+        <div class="col-md-4">
+          <div class="my-4 sticky-top">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Each</th>
+                  <th scope="col">Item Total</th>
+                </tr>
+              </thead>
+              <tbody id="tableElem">
+                
+              </tbody>
+              <tfoot class="d-md-flex-column">
+                <tr>
+                  <th>Order Total: $<span id="totalElem">0</span></th>
+                </tr>
+                <tr>
+                  <th>
+                    <button onclick="checkOut()" class="btn btn-warning">Check Out</button>
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-8">
           <div class="row">
+            <div class="col-12">
+              <div class="fs-3 text-center">
+                <span>Ice Cream</span>
+              </div>
+            </div>
             <div class="col-4">
               <div onclick="addItemToCart(0)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1691431619953-06a2c4220cfe?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHZhbmlsbGElMjBpY2UlMjBjcmVhbXxlbnwwfHwwfHx8Mg%3D%3D" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Vanilla</p>
                   <p class="card-title fs-5">$1.00</p>
@@ -65,7 +72,7 @@
             </div>
             <div class="col-4">
               <div onclick="addItemToCart(1)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1595958145833-b81385bcf83f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHZhbmlsbGElMjBpY2UlMjBjcmVhbXxlbnwwfHwwfHx8Mg%3D%3D" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Cookie Dough</p>
                   <p class="card-title fs-5">$2.00</p>
@@ -74,7 +81,7 @@
             </div>
             <div class="col-4">
               <div onclick="addItemToCart(2)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img ic-img-top p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Strawberry</p>
                   <p class="card-title fs-5">$1.25</p>
@@ -83,7 +90,7 @@
             </div>
             <div class="col-4">
               <div onclick="addItemToCart(3)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1529688499411-262f191fe29e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Mint Chocolate Chip</p>
                   <p class="card-title fs-5">$2.25</p>
@@ -92,7 +99,7 @@
             </div>
             <div class="col-4">
               <div onclick="addItemToCart(4)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDI%3D" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Chocolate</p>
                   <p class="card-title fs-5">$1.50</p>
@@ -101,16 +108,21 @@
             </div>
             <div class="col-4">
               <div onclick="addItemToCart(5)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1561230101-2c841778f9ae?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Caramel</p>
                   <p class="card-title fs-5">$1.75</p>
                 </div>
               </div>
             </div>
+            <div class="col-12">
+              <div class="fs-3 text-center">
+                <span>Toppings</span>
+              </div>
+            </div>
             <div class="col-4">
               <div onclick="addItemToCart(6)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1646318753516-078a7ddcc770?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHZhbmlsbGElMjBpY2UlMjBjcmVhbXxlbnwwfHwwfHx8Mg%3D%3D" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Sprinkles</p>
                   <p class="card-title fs-5">$0.25</p>
@@ -119,7 +131,7 @@
             </div>
             <div class="col-4">
               <div onclick="addItemToCart(7)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1526364163643-89e30b8fcb70?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFuYW5hJTIwc2xpY2VzfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Banana</p>
                   <p class="card-title fs-5">$0.25</p>
@@ -128,11 +140,16 @@
             </div>
             <div class="col-4">
               <div onclick="addItemToCart(8)" class="card rounded-3 my-3 food-item">
-                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNvb2tpZSUyMGNodW5rc3xlbnwwfHwwfHx8Mg%3D%3D" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Cookie Chunks</p>
                   <p class="card-title fs-5">$0.50</p>
                 </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="fs-3 text-center">
+                <span>Containers</span>
               </div>
             </div>
           </div>
