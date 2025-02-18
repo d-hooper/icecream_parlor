@@ -44,7 +44,7 @@ const iceCreamItems = [
     type: 'topping'
   },
   {
-    name: 'Chocolate Chips',
+    name: 'Banana',
     price: 0.25,
     quantity: 0,
     type: 'topping'
@@ -65,6 +65,7 @@ function addItemToCart(i) {
   itemToAdd.quantity++
 
   drawCart()
+  drawCartTotal()
 }
 
 function calculateOrderTotal() {
@@ -91,12 +92,20 @@ function drawCart() {
     const iceCreamItem = iceCreamItems[i];
 
     if (iceCreamItem.quantity > 0) {
-      itemString += `<tr><th scope="row">${iceCreamItem.name}</th><td>${iceCreamItem.quantity}</td><td>$${iceCreamItem.price.toFixed(2)}</td><td>$${iceCreamItem.price * iceCreamItem.quantity}</td></tr>`
+      itemTotal = iceCreamItem.price * iceCreamItem.quantity
+      itemString += `<tr><th scope="row">${iceCreamItem.name}</th><td>${iceCreamItem.quantity}</td><td>$${iceCreamItem.price.toFixed(2)}</td><td>$${itemTotal.toFixed(2)}</td></tr>`
     }
   }
   cartSelectElem = document.getElementById('tableElem')
   cartSelectElem.innerHTML = itemString
 
+}
+
+function drawCartTotal() {
+  const totalSelectElem = document.getElementById('totalElem')
+  const total = calculateOrderTotal()
+
+  totalSelectElem.innerText = total.toFixed(2)
 }
 
 // !SECTION
