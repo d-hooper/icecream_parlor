@@ -1,14 +1,14 @@
 // SECTION Global variables
-const iceCream = [
+const iceCreamItems = [
   {
-    name: 'Cookie Dough',
-    price: 1.25,
+    name: 'Vanilla',
+    price: 1.00,
     quantity: 0,
     type: 'scoop'
   },
   {
-    name: 'Vanilla',
-    price: 1,
+    name: 'Cookie Dough',
+    price: 2.00,
     quantity: 0,
     type: 'scoop'
   },
@@ -20,19 +20,19 @@ const iceCream = [
   },
   {
     name: 'Mint Chocolate Chip',
-    price: 1.25,
+    price: 2.25,
     quantity: 0,
     type: 'scoop'
   },
   {
     name: 'Chocolate',
-    price: 1.25,
+    price: 1.50,
     quantity: 0,
     type: 'scoop'
   },
   {
     name: 'Caramel',
-    price: 1.25,
+    price: 1.75,
     quantity: 0,
     type: 'scoop'
   },
@@ -60,8 +60,43 @@ const iceCream = [
 
 // SECTION Logic
 
+function addItemToCart(i) {
+  const itemToAdd = iceCreamItems[i]
+  itemToAdd.quantity++
+
+  drawCart()
+}
+
+function calculateOrderTotal() {
+
+  let orderTotal = 0
+
+  for (let i = 0; i < iceCreamItems.length; i++) {
+    const iceCreamItem = iceCreamItems[i];
+    orderTotal += iceCreamItem.quantity * iceCreamItem.price
+  }
+
+  return orderTotal
+}
+
 // !SECTION
 
 // SECTION Draw / Update
+
+function drawCart() {
+  let itemString = ''
+
+
+  for (let i = 0; i < iceCreamItems.length; i++) {
+    const iceCreamItem = iceCreamItems[i];
+
+    if (iceCreamItem.quantity > 0) {
+      itemString += `<tr><th scope="row">${iceCreamItem.name}</th><td>${iceCreamItem.quantity}</td><td>$${iceCreamItem.price.toFixed(2)}</td><td>$${iceCreamItem.price * iceCreamItem.quantity}</td></tr>`
+    }
+  }
+  cartSelectElem = document.getElementById('tableElem')
+  cartSelectElem.innerHTML = itemString
+
+}
 
 // !SECTION

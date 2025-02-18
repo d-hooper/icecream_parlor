@@ -1,9 +1,9 @@
 .food-item {
-  box-shadow: 1px 1px 8px #000;
+  box-shadow: 3px 3px 8px #000;
 }
 
 .food-item:hover {
-  box-shadow: 1px 1px 8px #ffc1079f;
+  box-shadow: 3px 3px 8px #2f15c2e5;
 }
 
 .ic-img {

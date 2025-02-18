@@ -28,12 +28,34 @@
     <div class="container-fluid">
       <div class="row px-5">
         <div class="col-md-5">
-          
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Each</th>
+                <th scope="col">Item Total</th>
+              </tr>
+            </thead>
+            <tbody id="tableElem">
+              
+            </tbody>
+            <tfoot class="d-md-flex-column">
+              <tr>
+                <th>Order Total: $<span>0</span></th>
+              </tr>
+              <tr>
+                <th>
+                  <button class="btn btn-warning">Checkout</button>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
         </div>
         <div class="col-md-7">
           <div class="row">
             <div class="col-4">
-              <div class="card rounded-3 my-3 food-item">
+              <div onclick="addItemToCart(0)" class="card rounded-3 my-3 food-item">
                 <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
                   <p class="card-title fs-5">Vanilla</p>
@@ -42,47 +64,47 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="card rounded-3 my-3 food-item">
+              <div onclick="addItemToCart(1)" class="card rounded-3 my-3 food-item">
                 <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
-                  <p class="card-title fs-5">Flavor</p>
-                  <p class="card-title fs-5">$1.</p>
+                  <p class="card-title fs-5">Cookie Dough</p>
+                  <p class="card-title fs-5">$2.00</p>
                 </div>
               </div>
             </div>
             <div class="col-4">
-              <div class="card rounded-3 my-3 food-item">
+              <div onclick="addItemToCart(2)" class="card rounded-3 my-3 food-item">
                 <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
-                  <p class="card-title fs-5">Flavor</p>
-                  <p class="card-title fs-5">$1.</p>
+                  <p class="card-title fs-5">Strawberry</p>
+                  <p class="card-title fs-5">$1.25</p>
                 </div>
               </div>
             </div>
             <div class="col-4">
-              <div class="card rounded-3 my-3 food-item">
+              <div onclick="addItemToCart(3)" class="card rounded-3 my-3 food-item">
                 <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
-                  <p class="card-title fs-5">Flavor</p>
-                  <p class="card-title fs-5">$1.</p>
+                  <p class="card-title fs-5">Mint Chocolate Chip</p>
+                  <p class="card-title fs-5">$2.25</p>
                 </div>
               </div>
             </div>
             <div class="col-4">
-              <div class="card rounded-3 my-3 food-item">
+              <div onclick="addItemToCart(4)" class="card rounded-3 my-3 food-item">
                 <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
-                  <p class="card-title fs-5">Flavor</p>
-                  <p class="card-title fs-5">$1.</p>
+                  <p class="card-title fs-5">Chocolate</p>
+                  <p class="card-title fs-5">$1.50</p>
                 </div>
               </div>
             </div>
             <div class="col-4">
-              <div class="card rounded-3 my-3 food-item">
+              <div onclick="addItemToCart(5)" class="card rounded-3 my-3 food-item">
                 <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHwy" class="card-img-top ic-img p-3" alt="...">
                 <div class="card-body p-1 text-center">
-                  <p class="card-title fs-5">Flavor</p>
-                  <p class="card-title fs-5">$1.</p>
+                  <p class="card-title fs-5">Caramel</p>
+                  <p class="card-title fs-5">$1.75</p>
                 </div>
               </div>
             </div>
