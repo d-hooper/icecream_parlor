@@ -1,0 +1,13 @@
+.food-item {
+  box-shadow: 1px 1px 8px #000;
+}
+
+.food-item:hover {
+  box-shadow: 1px 1px 8px #ffc1079f;
+}
+
+.ic-img {
+  max-height: 25dvh;
+  object-fit: cover;
+  object-position: center;
+}
