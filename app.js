@@ -36,7 +36,6 @@ const iceCreamItems = [
     quantity: 0,
     type: 'scoop'
   },
-
   {
     name: 'Sprinkles',
     price: 0.25,
@@ -54,7 +53,26 @@ const iceCreamItems = [
     price: 0.50,
     quantity: 0,
     type: 'topping'
+  },
+  {
+    name: 'Sprinkle Bowl',
+    price: 3.25,
+    quantity: 0,
+    type: 'container'
+  },
+  {
+    name: 'Waffle Tower',
+    price: 7.50,
+    quantity: 0,
+    type: 'topping'
+  },
+  {
+    name: 'Crepe Bowl',
+    price: 10.50,
+    quantity: 0,
+    type: 'topping'
   }
+
 ]
 // !SECTION
 

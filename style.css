@@ -1,9 +1,25 @@
+main {
+  background-color: #daad6a80;
+}
+
+.reenie-beanie-regular {
+  font-size: 3rem;
+  font-family: "Reenie Beanie", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 5px #000;
+}
+
 .food-item {
   box-shadow: 3px 3px 8px #000;
+  height: 20rem;
 }
 
 .food-item:hover {
-  box-shadow: 3px 3px 16px #2f15c2e5;
+  box-shadow: 3px 3px 16px #57a8f2;
 }
 
 .ic-img {
@@ -14,6 +30,10 @@
 
 .ic-img-top {
   object-position: top;
+}
+
+.ic-img-bottom {
+  object-position: bottom;
 }
 
 td {
