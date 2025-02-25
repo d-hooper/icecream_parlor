@@ -131,11 +131,11 @@ function drawCart() {
     const iceCreamItem = iceCreamItems[i];
 
     if (iceCreamItem.quantity > 0) {
-      itemTotal = iceCreamItem.price * iceCreamItem.quantity
+      let itemTotal = iceCreamItem.price * iceCreamItem.quantity
       itemString += `<tr><th scope="row">${iceCreamItem.name}</th><td>${iceCreamItem.quantity}</td><td>$${iceCreamItem.price.toFixed(2)}</td><td>$${itemTotal.toFixed(2)}</td></tr>`
     }
   }
-  cartSelectElem = document.getElementById('tableElem')
+  const cartSelectElem = document.getElementById('tableElem')
   cartSelectElem.innerHTML = itemString
 
 }
